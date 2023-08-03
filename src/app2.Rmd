@@ -1,0 +1,88 @@
+---
+title: "Canada Forest Fires Statistics"
+output: html_document
+date: "2023-08-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r canada forest fires}
+install.packages("shiny")
+install.packages("shinydashboard")
+```
+
+```{r}
+library(shiny)
+library(shinydashboard)
+```
+
+```{r}
+# You should replace "wildfire_stable_diffusion.jpg" with your image path
+image_file1 <- "wildfire_stable_diffusion.jpg"
+image_file2 <- "wildfire_stable_diffusion2.jpg"
+image_file3 <- "wildfire_stable_diffusion3.jpg"
+
+# Read the image file and encode it to base64
+image_string1 <- base64enc::base64encode(image_file1)
+image_string2 <- base64enc::base64encode(image_file2)
+image_string3 <- base64enc::base64encode(image_file3)
+```
+
+
+```{r}
+# Define the UI
+ui <- dashboardPage(
+  dashboardHeader(title = "My Shiny App"),
+  dashboardSidebar(
+    sidebarMenu(
+      menuItem("Home", tabName = "home", icon = icon("home")),
+      menuItem("Fire Counts", tabName = "page2", icon = icon("page2")),
+      menuItem("Burned Area", tabName = "page3", icon = icon("page3")),
+      menuItem("Property Losses", tabName = "page4", icon = icon("page4"))
+    )
+  ),
+  dashboardBody(
+    tabItems(
+      # First tab - Home
+      homePageUI,
+      
+      # Placeholder for the other tabs
+      tabItem(tabName = "page2",
+              h2("Page 2")
+      ),
+      
+      tabItem(tabName = "page3",
+              h2("Page 3")
+      ),
+      
+      tabItem(tabName = "page4",
+              h2("Page 4")
+      )
+    )
+  )
+)
+
+# Define the server logic
+server <- function(input, output) {
+  # Server logic will go here
+}
+
+# Run the app
+shinyApp(ui = ui, server = server)
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::read_chunk("load_libraries.R")
+knitr::read_chunk("prepare_images.R")
+knitr::read_chunk("page_home.R")
+knitr::read_chunk("page_fire_counts.R")
+knitr::read_chunk("page_burned_area.R")
+knitr::read_chunk("page_property_losses.R")
+knitr::read_chunk("ui_elements.R")
+knitr::read_chunk("server_logic.R")
+```
+
