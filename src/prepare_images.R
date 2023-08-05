@@ -1,4 +1,3 @@
-## @knitr prepare_images
 image_logo <- "./img/canada.png"
 image_file1 <- "./img/wildfire_stable_diffusion.jpg"
 image_file2 <- "./img/wildfire_stable_diffusion2.jpg"

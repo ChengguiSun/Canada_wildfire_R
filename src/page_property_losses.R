@@ -1,4 +1,3 @@
-## @knitr page_property_losses
 # Load data
 fireLoss <- read.csv("./data/Cleaned_Property_losses.csv", header=TRUE, sep=",")
 

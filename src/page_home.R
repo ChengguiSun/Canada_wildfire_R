@@ -1,5 +1,3 @@
-## @knitr page_home
-
 homePageUI <- function(id) {
   ns <- NS(id)
   fluidRow(

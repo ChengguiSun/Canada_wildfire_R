@@ -1,4 +1,3 @@
-## @knitr server_logic
 server <- function(input, output, session) {
   callModule(homePage, "home")
   callModule(fireCountsPage, "fire_counts")

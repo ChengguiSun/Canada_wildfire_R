@@ -1,4 +1,3 @@
-## @knitr page_fire_counts
 # Load data
 fireNumber <- read.csv(file="./data/Cleaned_Number_of_fires_by_month.csv", header=TRUE, sep=",")
 
@@ -142,4 +141,3 @@ fireCountsPage <- function(input, output, session) {
     fig_num
   })
 }
-

@@ -1,4 +1,3 @@
-## @knitr page_burned_area
 # Load data
 fireArea <- read.csv("./data/Cleaned_Area_burned_by_month.csv", header=TRUE, sep=",")
 

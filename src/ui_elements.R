@@ -1,4 +1,3 @@
-## @knitr ui_elements
 ui <- dashboardPage(
   dashboardHeader(title = "My Shiny App"),
   dashboardSidebar(
