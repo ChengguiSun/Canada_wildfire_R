@@ -133,8 +133,7 @@ fireCountsPage <- function(input, output, session) {
       
       # Create a new dataframe for each jurisdiction
       jurisdiction_df <- fireNumber[fireNumber$Jurisdiction == jurisdiction,]
-      print(head(jurisdiction_df, 5))
-      
+
       # Add a line to the figure for the current jurisdiction
       fig_num <- fig_num %>% add_trace(x = ~Time, y = ~Number, name = jurisdiction, type = 'scatter', mode = 'lines', data = jurisdiction_df)
     }

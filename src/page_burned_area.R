@@ -124,7 +124,7 @@ burnedAreaPage <- function(input, output, session) {
   
   output$plot_area <- renderPlotly({
     # Create Time column from year and month
-    fireArea$Date <- as.Date(paste(fireArea$Year, fireArea$MonthNum, "01"), format = "%Y %m %d")
+    fireArea$Time <- as.Date(paste(fireArea$Year, fireArea$MonthNum, "01"), format = "%Y %m %d")
     
     # Create an empty plotly object
     fig_area <- plot_ly()
