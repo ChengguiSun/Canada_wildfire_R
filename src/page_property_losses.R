@@ -24,6 +24,8 @@ propertyLossPageUI <- function(id) {
             # Display the plot
             fluidRow(
               div(style = "max-width: 1100px; margin: 0 auto;",
+                  p("To interact with the Plot below: hover over the plot to view data values, and use the legend on the left to toggle visibility of different jurisdictions.",
+                    style = "font-size: 16px;"),
                   plotlyOutput(ns("plot_loss"))
               )
             ),
@@ -34,6 +36,9 @@ propertyLossPageUI <- function(id) {
             # Start fluidRow
             fluidRow(
               div(style = "max-width: 1100px; margin: 0 auto;",
+                  p("To explore the table below, utilize the filters to narrow down specific years or jurisdictions. 
+                     By default, the table displays 5 rows. However, once filters are applied, all entries meeting the criteria will be displayed.",
+                    style = "font-size: 16px;"),
                   # Column for filters
                   column(width = 6,
                          selectInput(ns("selected_value1_year_loss"),
