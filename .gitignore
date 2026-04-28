@@ -1,2 +1,7 @@
 *.log
 .Rproj.user
+.Rhistory
+Canada_wildfire_R.Rproj
+Canada_Forest_Fires_Statistics.dcf
+Canada_wildfire1.dcf
+.positai

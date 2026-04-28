@@ -1,6 +1,9 @@
 # Load data
 fireLoss <- read.csv("./data/Cleaned_Property_losses.csv", header=TRUE, sep=",")
 
+fireLoss <- fireLoss %>%
+  filter(Jurisdiction != "National parks")
+
 # Create the sorted list of unique jurisdictions
 unique_jurisdictions_loss <- sort(unique(fireLoss$Jurisdiction))
 unique_jurisdictions_loss <- unique_jurisdictions_loss[unique_jurisdictions_loss != "Canada"]

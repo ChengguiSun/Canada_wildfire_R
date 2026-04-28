@@ -117,7 +117,8 @@ fireCountsPage <- function(input, output, session) {
     # Exclude 'X', 'Time', and 'MonthNum' columns
     df <- df[ , !(names(df) %in% c("X", "Time", "MonthNum"))]
     df
-    }
+    },
+    digits = 0
 )
   
   

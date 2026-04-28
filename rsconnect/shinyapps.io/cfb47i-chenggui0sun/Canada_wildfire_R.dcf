@@ -1,0 +1,12 @@
+name: Canada_wildfire_R
+title: Canada_wildfire_R
+username: cfb47i-chenggui0sun
+account: cfb47i-chenggui0sun
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 17244734
+bundleId: 11916648
+url: https://cfb47i-chenggui0sun.shinyapps.io/Canada_wildfire_R/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
